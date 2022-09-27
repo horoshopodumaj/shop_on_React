@@ -49,6 +49,14 @@ class App extends React.Component {
                     category: "chairs",
                     price: "49.99",
                 },
+                {
+                    id: 6,
+                    title: "Лампа",
+                    img: "lamp2.jpg",
+                    desc: "Lorem ipsum dolor sit amet.",
+                    category: "lamps",
+                    price: "24.99",
+                },
             ],
         };
 
