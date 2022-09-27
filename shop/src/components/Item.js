@@ -8,7 +8,14 @@ export class Item extends Component {
                 <h2>{this.props.item.title}</h2>
                 <h2>{this.props.item.desc}</h2>
                 <b>{this.props.item.price}$</b>
-                <div className="add-to-cart">+</div>
+                <div
+                    className="add-to-cart"
+                    onClick={() => {
+                        this.props.onAdd(this.props.item);
+                    }}
+                >
+                    +
+                </div>
             </div>
         );
     }
