@@ -6,7 +6,7 @@ const showOrders = (props) => {
     return (
         <>
             {props.orders.map((item) => (
-                <Order key={item.id} item={item} />
+                <Order onDelete={props.onDelete} key={item.id} item={item} />
             ))}
         </>
     );
