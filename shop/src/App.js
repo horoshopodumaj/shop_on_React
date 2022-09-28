@@ -121,7 +121,19 @@ class App extends React.Component {
             }
         });
         if (!isInArray) {
-            this.setState({ orders: [...this.state.orders, item] });
+            this.setState({
+                orders: [...this.state.orders, { ...item, count: 1 }],
+            });
+        } else {
+            this.setState({
+                orders: this.state.orders.map((elem) => {
+                    if (elem.id === item.id) {
+                        return { ...item, count: elem.count + 1 };
+                    } else {
+                        return elem;
+                    }
+                }),
+            });
         }
     }
 

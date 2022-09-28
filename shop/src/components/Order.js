@@ -8,6 +8,12 @@ export class Order extends Component {
                 <img src={`./img/${this.props.item.img}`} />
                 <h2>{this.props.item.title}</h2>
                 <b>{this.props.item.price}$</b>
+                <div className="buttons">
+                    <button>-</button>
+                    <span>{this.props.item.count}</span>
+                    <button>+</button>
+                </div>
+
                 <FaTrash
                     className="delete-icon"
                     onClick={() => this.props.onDelete(this.props.item.id)}

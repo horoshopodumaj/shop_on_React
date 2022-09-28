@@ -148,6 +148,13 @@ header .presentation::before {
     color: #fff;
 }
 
+.buttons {
+    display: inline-block;
+    margin-left: 105px;
+    position: relative;
+    top: -15px;
+}
+
 .categories div {
     display: inline-block;
     background: #f2f2f2;
