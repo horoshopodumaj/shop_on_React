@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaTrash } from "react-icons/fa";
+import { FaTrash, FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 
 export class Order extends Component {
     render() {
@@ -9,9 +9,13 @@ export class Order extends Component {
                 <h2>{this.props.item.title}</h2>
                 <b>{this.props.item.price}$</b>
                 <div className="buttons">
-                    <button>-</button>
+                    <FaMinusCircle
+                        onClick={() => this.props.decrement(this.props.item)}
+                    />
                     <span>{this.props.item.count}</span>
-                    <button>+</button>
+                    <FaPlusCircle
+                        onClick={() => this.props.increment(this.props.item)}
+                    />
                 </div>
 
                 <FaTrash

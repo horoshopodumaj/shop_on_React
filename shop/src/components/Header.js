@@ -5,13 +5,19 @@ import Order from "./Order";
 const showOrders = (props) => {
     let sum = 0;
     props.orders.forEach((elem) => {
-        sum += Number.parseFloat(elem.price);
+        sum += Number.parseFloat(elem.price * elem.count);
     });
 
     return (
         <>
             {props.orders.map((item) => (
-                <Order onDelete={props.onDelete} key={item.id} item={item} />
+                <Order
+                    onDelete={props.onDelete}
+                    key={item.id}
+                    item={item}
+                    decrement={props.decrement}
+                    increment={props.increment}
+                />
             ))}
             <p className="sum">Сумма: {new Intl.NumberFormat().format(sum)}$</p>
         </>

@@ -70,6 +70,8 @@ class App extends React.Component {
         this.deleteOrder = this.deleteOrder.bind(this);
         this.chooseCategory = this.chooseCategory.bind(this);
         this.onShowItem = this.onShowItem.bind(this);
+        this.decrement = this.decrement.bind(this);
+        this.increment = this.increment.bind(this);
     }
     render() {
         return (
@@ -77,6 +79,8 @@ class App extends React.Component {
                 <Header
                     orders={this.state.orders}
                     onDelete={this.deleteOrder}
+                    increment={this.increment}
+                    decrement={this.decrement}
                 />
                 <Categories chooseCategory={this.chooseCategory} />
                 <Items
@@ -110,6 +114,36 @@ class App extends React.Component {
             currentItems: this.state.items.filter(
                 (el) => el.category === category
             ),
+        });
+    }
+    decrement(item) {
+        this.setState({
+            orders: this.state.orders.map((elem) => {
+                if (elem.id === item.id) {
+                    return {
+                        ...item,
+                        count: elem.count > 0 ? elem.count - 1 : 0,
+                    };
+                } else {
+                    return elem;
+                }
+            }),
+        });
+
+        if (item.count === 1) {
+            this.deleteOrder(item.id);
+        }
+    }
+
+    increment(item) {
+        this.setState({
+            orders: this.state.orders.map((elem) => {
+                if (elem.id === item.id) {
+                    return { ...item, count: elem.count + 1 };
+                } else {
+                    return elem;
+                }
+            }),
         });
     }
 

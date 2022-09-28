@@ -91,13 +91,14 @@ header .shop-cart .item h2 {
 header .shop-cart .item b {
     color: #797979;
     font-weight: 600;
+    display: block;
 }
 
 header .shop-cart .item .delete-icon {
     color: #ca5252;
     float: right;
     position: relative;
-    top: -25px;
+    top: -35px;
     cursor: pointer;
     transition: color, transform 500ms ease;
 }
@@ -150,9 +151,13 @@ header .presentation::before {
 
 .buttons {
     display: inline-block;
-    margin-left: 105px;
+    margin-left: 280px;
     position: relative;
-    top: -15px;
+    top: -35px;
+}
+
+.buttons span {
+    margin: 20px;
 }
 
 .categories div {
