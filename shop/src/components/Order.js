@@ -10,10 +10,12 @@ export class Order extends Component {
                 <b>{this.props.item.price}$</b>
                 <div className="buttons">
                     <FaMinusCircle
+                        className="plus-minus"
                         onClick={() => this.props.decrement(this.props.item)}
                     />
                     <span>{this.props.item.count}</span>
                     <FaPlusCircle
+                        className="plus-minus"
                         onClick={() => this.props.increment(this.props.item)}
                     />
                 </div>

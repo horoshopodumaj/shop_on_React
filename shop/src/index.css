@@ -160,6 +160,19 @@ header .presentation::before {
 
 .buttons span {
     margin: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #797979;
+}
+
+.plus-minus {
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+.plus-minus:hover {
+    color: #dc3d3d;
+    transform: scale(1.5);
 }
 
 .categories div {
