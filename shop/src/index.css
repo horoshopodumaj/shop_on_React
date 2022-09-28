@@ -80,8 +80,10 @@ header .shop-cart .item {
 
 header .shop-cart .item img {
     width: 70px;
+    max-height: 50px;
     float: left;
     margin-right: 20px;
+    object-fit: contain;
 }
 
 header .shop-cart .item h2 {
