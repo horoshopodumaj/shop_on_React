@@ -286,6 +286,7 @@ footer {
 @media screen and (max-width: 1310px) {
     .wrapper {
         padding: 0 20px;
+        margin: 30px auto;
     }
 }
 @media screen and (max-width: 768px) {
@@ -320,5 +321,9 @@ footer {
     header .presentation {
         margin: 30px 0;
         height: 400px;
+    }
+
+    header {
+        text-align: center;
     }
 }
