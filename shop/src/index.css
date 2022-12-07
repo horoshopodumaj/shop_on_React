@@ -326,4 +326,76 @@ footer {
     header {
         text-align: center;
     }
+
+    header .shop-cart .item img {
+        margin-right: -99px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    header .shop-cart {
+        width: 400px;
+    }
+
+    .buttons {
+        margin-left: 250px;
+    }
+
+    .buttons span {
+        margin: 10px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header .shop-cart {
+        width: 350px;
+    }
+    .buttons {
+        margin-left: 230px;
+    }
+
+    .buttons span {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 430px) {
+    header .shop-cart {
+        width: 300px;
+    }
+    .buttons {
+        display: inline-block;
+        margin-left: 200px;
+        position: relative;
+        top: -35px;
+    }
+    .buttons span {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 380px) {
+    header .shop-cart {
+        width: 280px;
+        padding: 10px;
+        padding-bottom: 0;
+    }
+    .buttons {
+        display: inline-block;
+        margin-left: 180px;
+    }
+    .buttons span {
+        font-size: 14px;
+    }
+
+    header .shop-cart .item img {
+        width: 60px;
+    }
+
+    header .shop-cart .item h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    header .shop-cart .sum {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
 }
